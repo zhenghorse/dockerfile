@@ -4,6 +4,7 @@ ENV MQ_VERSION=v3.5.8
 
 RUN groupadd admin && useradd -g admin -s /bin/bash -c Admin admin  && mkdir -p /home/admin && chown admin /home/admin
 USER admin
+RUN sudo chmod 777 -R /root/.m2
 
 RUN cd /home/admin && git clone -b ${MQ_VERSION} https://github.com/alibaba/RocketMQ.git
 WORKDIR /home/admin/RocketMQ
