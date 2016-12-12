@@ -10,4 +10,4 @@ RUN ln -s target/alibaba-rocketmq-${MQ_VERSION}-alibaba-rocketmq/alibaba-rocketm
 
 WORKDIR /home/admin/RocketMQ/devenv/bin
 EXPOSE 10911
-CMD  ["mvn --version"]
+CMD ["/bin/echo", "this is a echo test "] 
